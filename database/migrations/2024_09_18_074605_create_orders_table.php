@@ -18,14 +18,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        // Create pivot table for order_product (many-to-many relation)
-        Schema::create('order_product', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('order_id')->constrained()->onDelete('cascade'); // Foreign key to orders
-            $table->foreignId('product_id')->constrained()->onDelete('cascade'); // Foreign key to products
-            $table->integer('quantity')->default(1); // Optional: Add quantity field to track product quantity per order
-            $table->timestamps();
-        });
+      
     }
 
     /**

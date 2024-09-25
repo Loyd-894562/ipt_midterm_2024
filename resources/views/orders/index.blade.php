@@ -11,6 +11,11 @@
         </div>
     @endif
 
+
+    <!-- Add Order Button -->
+    <a href="{{ route('orders.create') }}" class="btn btn-primary mb-3">Add New Order</a>
+
+
     <!-- Orders Table -->
     <table class="table table-bordered">
         <thead>
